@@ -1,1 +1,1 @@
-{"version":3,"sources":["script.js"],"names":[],"mappings":"AAAA","file":"script.js"}
+{"version":3,"sources":["script.js"],"names":["ToggleSideBar","document","querySelector","classList","toggle"],"mappings":"AAAA,aAAA,SAASA,gBACcC,SAASC,cAAc,kBAC/BC,UAAUC,OAAO","file":"script.js","sourcesContent":["function ToggleSideBar(){\r\n    const getNavSide = document.querySelector('.nav .nav_side')\r\n    getNavSide.classList.toggle('show')\r\n}"]}
