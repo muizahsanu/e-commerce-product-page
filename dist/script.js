@@ -1,2 +1,2 @@
-"use strict";function ToggleSideBar(){document.querySelector(".nav .nav_side").classList.toggle("show")}
+"use strict";function ToggleSideBar(){document.querySelector(".nav .nav_side").classList.toggle("show")}function ShowCart(){var e=document.querySelector("#navcart"),t=document.querySelector("#outside-cart");e.classList.toggle("show"),t.classList.toggle("show")}
 //# sourceMappingURL=script.js.map
