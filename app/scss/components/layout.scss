@@ -5,3 +5,9 @@
     max-width: rem(1200);
     margin: 0 auto;
 }
+.main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: rem(82) rem(41);
+    align-items: center;
+}

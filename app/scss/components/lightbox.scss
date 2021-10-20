@@ -1,0 +1,41 @@
+@use 'utils' as *;
+
+.lightbox{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: rem(32);
+    .previews{
+        min-width: rem(400);
+        max-width: rem(400);
+        border-radius: rem(16);
+    }
+    .items{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: rem(400);
+        .item{
+            max-width: rem(64);
+            border-radius: rem(8);
+            overflow: hidden;
+            img{
+                width: 100%;
+                object-fit: cover;
+                display: block;
+            }
+            &:hover{
+                cursor: pointer;
+                img{
+                    opacity: .35;
+                }
+            }
+            &.active{
+                border: 2px solid $orange;
+                img{
+                    opacity: .35;
+                }
+            }
+        }
+    }
+}

@@ -27,6 +27,13 @@ a, a:active, a:visited {
   margin: 0 auto;
 }
 
+.main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 5.125rem 2.5625rem;
+  align-items: center;
+}
+
 .nav {
   display: flex;
   position: relative;
@@ -262,5 +269,46 @@ a, a:active, a:visited {
 }
 .basebutton:hover {
   cursor: pointer;
+}
+
+.lightbox {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.lightbox .previews {
+  min-width: 25rem;
+  max-width: 25rem;
+  border-radius: 1rem;
+}
+.lightbox .items {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 25rem;
+}
+.lightbox .items .item {
+  max-width: 4rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.lightbox .items .item img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.lightbox .items .item:hover {
+  cursor: pointer;
+}
+.lightbox .items .item:hover img {
+  opacity: 0.35;
+}
+.lightbox .items .item.active {
+  border: 2px solid #ff7d1a;
+}
+.lightbox .items .item.active img {
+  opacity: 0.35;
 }
 /*# sourceMappingURL=style.css.map */
