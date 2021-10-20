@@ -58,4 +58,6 @@ exports.default = series(
     watchTask,
 )
 
+exports.build = series(scssTask, jsTask);
+
 
