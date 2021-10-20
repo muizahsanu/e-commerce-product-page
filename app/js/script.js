@@ -10,16 +10,19 @@ function ShowCart(){
     getOutsideCart.classList.toggle('show')
 }
 
+// Init Lightbox On Main
 var lightboxIndex = 1
-showSlide(lightboxIndex)
+showSlide(lightboxIndex, 'main')
 
-function currentSlide(n){
-    showSlide(lightboxIndex = n)
+// Function for preview image by clicking item image
+function currentSlide(n, cntx){
+    showSlide(lightboxIndex = n, cntx)
 }
 
-function showSlide(n){
-    const itemPreviews = document.getElementsByClassName('previews')
-    const items = document.getElementsByClassName('item')
+// Slideshow function
+function showSlide(n, cntx){
+    const itemPreviews = document.querySelectorAll('.'+cntx+' .previews')
+    const items = document.querySelectorAll('.'+cntx+' .item')
 
     // Validasi
     if(n > itemPreviews.length) lightboxIndex = 1
@@ -35,6 +38,8 @@ function showSlide(n){
         items[i].classList.remove('active')
     }
 
+    // Set preview item display to block (big image)
+    // set item active class (small image) by index
     itemPreviews[lightboxIndex-1].style.display = 'block'
     items[lightboxIndex-1].classList.add('active')
 }
