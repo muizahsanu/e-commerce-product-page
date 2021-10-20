@@ -18,6 +18,11 @@ showSlide(lightboxIndex, 'main')
 function currentSlide(n, cntx){
     showSlide(lightboxIndex = n, cntx)
 }
+
+function plusSlide(n, cntx){
+    showSlide(lightboxIndex += n, cntx)
+}
+
 // Open Lightbox Modal
 function openModal(n, cntx){
     const getModal = document.getElementById('lightbox-modal')
@@ -33,7 +38,7 @@ function closeModal(){
 
 // Slideshow function
 function showSlide(n, cntx){
-    const itemPreviews = document.querySelectorAll('.'+cntx+' .previews')
+    const itemPreviews = document.querySelectorAll('.'+cntx+' .preview')
     const items = document.querySelectorAll('.'+cntx+' .item')
 
     // Validasi

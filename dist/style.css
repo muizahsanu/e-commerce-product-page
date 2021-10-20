@@ -279,12 +279,41 @@ a, a:active, a:visited {
   gap: 2rem;
 }
 .lightbox .previews {
+  position: relative;
+}
+.lightbox .previews .preview {
   width: 100%;
   max-width: 25rem;
   border-radius: 1rem;
 }
-.lightbox .previews:hover {
+.lightbox .previews .preview:hover {
   cursor: pointer;
+}
+.lightbox .previews .prev, .lightbox .previews .next {
+  position: absolute;
+  top: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  border-radius: 100%;
+}
+.lightbox .previews .prev svg, .lightbox .previews .next svg {
+  transform: scale(0.7);
+}
+.lightbox .previews .prev:hover, .lightbox .previews .next:hover {
+  cursor: pointer;
+}
+.lightbox .previews .prev:hover svg *, .lightbox .previews .next:hover svg * {
+  stroke: #ff7d1a;
+}
+.lightbox .previews .prev {
+  left: -16px;
+}
+.lightbox .previews .next {
+  right: -16px;
 }
 .lightbox .items {
   display: flex;
