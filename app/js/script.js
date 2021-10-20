@@ -88,6 +88,10 @@ function addToCart(){
     const priceAfterDiscount = product.price * discount
     const totalPrice = priceAfterDiscount * quantity
     
+    if(parseInt(quantity) == 0){
+        return
+    }
+
     const dataCart = {
         id: product.id,
         title: product.title,

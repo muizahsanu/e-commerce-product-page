@@ -76,20 +76,17 @@
         &{
             top: rem(58);
             left: 0;
-            max-width: fit-content;
-            width: 100%;
+            max-width: none;
             margin: 0 rem(8);
         }
     }
 }
 
 #outside-cart{
-    // z-index: -1;
     position: absolute;
     width: 100%;
     height: 100%;
     display: none;
-    // background-color: rgba($color: $black, $alpha: .4);
 
     &.show{
         display: block;

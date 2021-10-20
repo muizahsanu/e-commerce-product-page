@@ -247,10 +247,7 @@ a, a:active, a:visited {
   .cart {
     top: 3.625rem;
     left: 0;
-    max-width: -webkit-fit-content;
-    max-width: -moz-fit-content;
-    max-width: fit-content;
-    width: 100%;
+    max-width: none;
     margin: 0 0.5rem;
   }
 }
