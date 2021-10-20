@@ -26,14 +26,16 @@ function plusSlide(n, cntx){
 // Open Lightbox Modal
 function openModal(n, cntx){
     const getModal = document.getElementById('lightbox-modal')
-    getModal.style.display = 'flex'
+    getModal.classList.add('show')
+    // getModal.style.display = 'flex'
     showSlide(lightboxIndex = n, cntx)
 }
 
 // Close Lightbox Modal
 function closeModal(){
     const getModal = document.getElementById('lightbox-modal')
-    getModal.style.display = 'none'
+    getModal.classList.remove('show')
+    // getModal.style.display = 'none'
 }
 
 // Slideshow function

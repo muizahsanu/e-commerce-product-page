@@ -1,6 +1,7 @@
 @use 'utils' as *;
 
 .cart{
+    z-index: 3;
     position: absolute;
     right: 0;
     top: rem(76);
@@ -71,11 +72,11 @@
 
     @include breakpoint-down(small){
         &{
-            top: rem(64);
+            top: rem(58);
             left: 0;
-            max-width: none;
-            width: 90%;
-            margin: 0 auto;
+            max-width: fit-content;
+            width: 100%;
+            margin: 0 rem(8);
         }
     }
 }

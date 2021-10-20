@@ -8,7 +8,16 @@
 .main{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: rem(82) rem(41);
+    padding: rem(82) rem(16);
     align-items: center;
     gap: rem(32);
+    
+    @include breakpoint-down(small){
+        display: block;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: none;
+        padding: 0;
+        width: 100%;
+        margin: 0;
+    }
 }
