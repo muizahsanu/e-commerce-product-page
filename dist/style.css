@@ -240,6 +240,9 @@ a, a:active, a:visited {
 .cart .cart_content .basket .cart_item :last-child {
   margin-left: auto;
 }
+.cart .cart_content .basket .cart_item .btn-delete:hover {
+  cursor: pointer;
+}
 @media (max-width: 44.375em) {
   .cart {
     top: 3.625rem;
@@ -287,6 +290,7 @@ a, a:active, a:visited {
 }
 .basebutton:hover {
   cursor: pointer;
+  opacity: 0.75;
 }
 .basebutton.shadow {
   box-shadow: #ff7d1a 0px 25px 20px -20px;

@@ -66,6 +66,9 @@
                 :last-child{
                     margin-left: auto;
                 }
+                .btn-delete:hover{
+                    cursor: pointer;
+                }
             }
         }
     }

@@ -24,6 +24,7 @@
     }
     &:hover{
         cursor: pointer;
+        opacity: .75;
     }
     &.shadow{
         box-shadow: rgba($color: $orange, $alpha: 1) 0px 25px 20px -20px;
