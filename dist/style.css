@@ -30,7 +30,7 @@ a, a:active, a:visited {
 .main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 5.125rem 1rem;
+  padding: 5.125rem 0;
   align-items: center;
   gap: 2rem;
 }
@@ -264,6 +264,7 @@ a, a:active, a:visited {
 
 .basebutton {
   width: 100%;
+  max-height: 2.75rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -286,6 +287,9 @@ a, a:active, a:visited {
 }
 .basebutton:hover {
   cursor: pointer;
+}
+.basebutton.shadow {
+  box-shadow: #ff7d1a 0px 25px 20px -20px;
 }
 
 .lightbox {
@@ -427,6 +431,97 @@ a, a:active, a:visited {
 @media (min-width: 44.3125em) {
   .modal.show {
     display: flex;
+  }
+}
+
+.iteminfo {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.125rem;
+  font-size: 0.875rem;
+  color: #b6bcc8;
+  max-width: 25rem;
+  margin: 0 auto;
+}
+.iteminfo .company {
+  color: #ff7d1a;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.iteminfo .title {
+  line-height: 2rem;
+}
+.iteminfo .title, .iteminfo .price-discount {
+  color: black;
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+.iteminfo .price {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  -moz-column-gap: 1.125rem;
+       column-gap: 1.125rem;
+}
+.iteminfo .price .discount {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  padding: 0.0625rem 0.375rem;
+  background-color: #ffede0;
+  color: #ff7d1a;
+  font-weight: 700;
+  border-radius: 0.25rem;
+}
+.iteminfo .actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.iteminfo .actions .quantities {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  font-size: 1.125rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  height: 2.75rem;
+  background-color: #f7f8fd;
+  box-shadow: rgba(104, 112, 125, 0.15) 0px 2px 8px;
+  color: black;
+}
+.iteminfo .actions .quantities div {
+  padding: 1rem;
+}
+.iteminfo .actions .quantities .decrease, .iteminfo .actions .quantities .increase {
+  color: #ff7d1a;
+}
+.iteminfo .actions .quantities .decrease:hover, .iteminfo .actions .quantities .increase:hover {
+  cursor: pointer;
+  filter: brightness(1.4);
+}
+@media (max-width: 44.375em) {
+  .iteminfo {
+    padding: 5%;
+    row-gap: 0.625rem;
+  }
+  .iteminfo .title, .iteminfo .price-discount {
+    font-size: 1.5625rem;
+  }
+  .iteminfo .price {
+    grid-template-columns: auto auto 1fr;
+    align-items: center;
+  }
+  .iteminfo .price .actual-price {
+    margin-left: auto;
+    text-decoration: line-through;
+  }
+  .iteminfo .actions {
+    flex-direction: column;
+  }
+  .iteminfo .actions .quantities {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */

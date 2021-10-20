@@ -2,6 +2,7 @@
 
 .basebutton{
     width: 100%;
+    max-height: rem(44);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,5 +24,8 @@
     }
     &:hover{
         cursor: pointer;
+    }
+    &.shadow{
+        box-shadow: rgba($color: $orange, $alpha: 1) 0px 25px 20px -20px;
     }
 }

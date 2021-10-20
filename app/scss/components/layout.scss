@@ -8,7 +8,7 @@
 .main{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: rem(82) rem(16);
+    padding: rem(82) 0;
     align-items: center;
     gap: rem(32);
     

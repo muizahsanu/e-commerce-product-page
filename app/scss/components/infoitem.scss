@@ -1,0 +1,87 @@
+@use 'utils' as *;
+
+.iteminfo{
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(18);
+    font-size: rem(14);
+    color: $grayrish-blue;
+    max-width: rem(400);
+    margin: 0 auto;
+    .company{
+        color: $orange;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    .title{
+        line-height: 2rem;
+    }
+    .title, .price-discount{
+        color: $black;
+        font-size: rem(30);
+        font-weight: 700;
+    }
+    .price {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        column-gap: rem(18);
+        .discount{
+            max-width: fit-content;
+            padding: rem(1) rem(6);
+            background-color: $paleorange;
+            color: $orange;
+            font-weight: 700;
+            border-radius: rem(4);
+        }
+    }
+    .actions{
+        display: flex;
+        align-items: center;
+        gap: rem(16);
+        .quantities{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 50%;
+            font-size: rem(18);
+            font-weight: 700;
+            border-radius: rem(8);
+            height: rem(44);
+            background-color: $light-grayrish-blue;
+            box-shadow: rgba($color: $dark-grayrish-blue, $alpha: .15) 0px 2px 8px;
+            color: $black;
+            div{
+                padding: rem(16);
+            }
+            .decrease, .increase{
+                color: $orange;
+                &:hover{
+                    cursor: pointer;
+                    filter: brightness(1.4);
+                }
+            }
+        }
+    }
+    @include breakpoint-down(small){
+        padding: 5%;
+        row-gap: rem(10);
+        .title, .price-discount{
+            font-size: rem(25);
+        }
+        .price{
+            grid-template-columns: auto auto 1fr;
+            align-items: center;
+            .actual-price{
+                margin-left: auto;
+                text-decoration: line-through;
+            }
+        }
+        .actions{
+            flex-direction: column;
+            .quantities{
+                width: 100%;
+            }
+        }
+    }
+}
